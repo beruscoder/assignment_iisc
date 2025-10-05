@@ -46,7 +46,7 @@ The [CLS] token aggregates information from all patch tokens. Passing it through
 Augmentation Strategy
 Final augmentations (crop, flip, jitter, rotation) were tuned experimentally, resulting in stronger generalization performance.
 ***********************************************************************************************************************************************************************************************************
-**Segment Anything Model v2 (SAM2) Pipeline**
+**Segment Anything Model v2 (SAM2) Pipeline (Because ofsome issue of widget metadata the notebook is not rendering in github so please download the notebook and run it on colab**
 
 🧠 Detailed Pipeline Description
 
@@ -123,15 +123,6 @@ The pipeline returns a structured output per image:
 
 These can be used for visualization, evaluation, or downstream computer vision tasks.
 
-**5. Optional: Automatic Mask Generation**
-
-When no text prompt is given, SAM2AutomaticMaskGenerator can be used to produce region proposals automatically across the image, functioning as a fully unsupervised segmentation stage.
-
-⚙️ Integrated Components
-Component	Role
-Grounding DINO	Text-conditioned object detection (box-level)
-SAM 2	High-quality segmentation from boxes or points
-GroundedSAM2Wrapper	Custom interface that unifies both models for end-to-end inference
 📉 Limitations
 
 Latency: Sequential model execution (DINO → SAM2) causes slower inference for large batches.
